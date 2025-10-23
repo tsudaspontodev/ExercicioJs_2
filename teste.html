@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Calculadora</title>
+</head>
+<body>
+  <h1>Mini Calculadora</h1>
+
+  <!-- Campos de entrada -->
+  <input type="number" id="num1" placeholder="Digite o primeiro número">
+  <input type="number" id="num2" placeholder="Digite o segundo número">
+
+  <br><br>
+
+  <!-- Botões de operação -->
+  <button onclick="calcular('+')">+</button>
+  <button onclick="calcular('-')">-</button>
+  <button onclick="calcular('*')">*</button>
+  <button onclick="calcular('/')">/</button>
+
+  <h2 id="resultado">Resultado: </h2>
+
+  <script>
+    function calcular(operacao) {
+      // Lê os valores e converte para número
+      let n1 = parseFloat(document.getElementById("num1").value);
+      let n2 = parseFloat(document.getElementById("num2").value);
+      let resultado = 0;
+
+      // Realiza a operação conforme o botão clicado
+      if (operacao === '+') {
+        resultado = n1 + n2;
+      } else if (operacao === '-') {
+        resultado = n1 - n2;
+      } else if (operacao === '*') {
+        resultado = n1 * n2;
+      } else if (operacao === '/') {
+        if (n2 !== 0) {
+          resultado = n1 / n2;
+        } else {
+          resultado = "Erro: divisão por zero";
+        }
+      }
+
+      // Exibe o resultado na página
+      document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+  </script>
+</body>
+</html>
