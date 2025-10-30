@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+</head>
+<body>
+
+    <h1>Verificador de Faixa Etária</h1>
+
+    <label for="idade">Digite a sua idade: </label>
+    <input type="number" name="" id="idade" placeholder="Ex: 18">
+    <button id="verificar">Verificar</button>
+
+    <div id="resultado"></div>
+    
+
+    <script>
+        const botao = document.getElementById('verificar');
+        const resultado = document.getElementById('resultado');
+
+        botao.addEventListener('click', function() {
+            const idade = parseInt(document.getElementById('idade').value);
+
+            if(isNaN(idade) || idade < 0) {
+                resultado.textContent = "Por favor, insira uma idade válida.";
+                resultado.className = "";
+                return;
+            }
+
+            if (idade >= 18) {
+                resultado.textContent = "Permitido";
+                resultado.className = "Permitido";
+            }else {
+                resultado.textContent = "Proibido";
+                resultado.className = "Proibido";
+            }
+        });
+    </script>
+</body>
+</html>
