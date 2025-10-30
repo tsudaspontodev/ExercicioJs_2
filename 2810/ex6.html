@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<body>
+
+    <h1>Contador de cliques</h1>
+
+    <button id="btn"> Clique Aqui</button>
+    <p id="contador">Total de Cliques: 0</p>
+
+    <script>
+        let contador = 0;
+        const botao = document.getElementById('btn');
+        const textoContador = document.getElementById('contador');
+
+        botao.addEventListener('click', function() {
+            contador ++;
+            textoContador.textContent = `O total de Cliques: ${contador}`
+        } )
+    </script>
+</body>
+</html>

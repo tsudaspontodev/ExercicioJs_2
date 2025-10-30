@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA</title>
+</head>
+<body>
+
+    <h1>MEDIA</h1>
+
+    <input type="number" name="nota1" id="nota1" placeholder="Infome a nota 1">
+
+    <input type="number" name="nota2" id="nota2" placeholder="Informe a nota 2">
+
+    <button id="media">Gerar Média</button>
+    <p id="result">-</p>
+
+    <script>
+        document.getElementById('media').addEventListener('click', () => {
+            const n1 = Number(document.getElementById('nota1').value)
+            const n2 = Number(document.getElementById('nota2').value)
+
+            document.getElementById('result').textContent = `A média das notas ${n1} e ${n2} é de ${(n1 + n2)/2}`
+        })
+    </script>
+    
+</body>
+</html>

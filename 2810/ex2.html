@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+
+    <style>
+        h1 {
+            color: black;
+            font-size: 32px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Hello World!!!</h1>
+
+    <button onclick="alteraH1()" >BOTÃO</button>
+    
+
+    <script>
+        function alteraH1 ()
+            {
+                const titulo = document.getElementById("titulo");
+                titulo.style.color = "blue";
+                titulo.style.fontSize = "48px";
+                titulo.textContent = "Texto alterado";
+            }
+    </script>
+</body>
+</html>
